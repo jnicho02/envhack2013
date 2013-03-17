@@ -92,7 +92,8 @@
     <div class="hero-unit" id="chart_div" style="width: 900px; height: 500px;"></div>
 
     
-    
+    <iframe src="webmap/webApp.html?requestType=organisations&orgId=3" width="100%" height="500"></iframe>
+	
 <%
 try {
   String driver = "org.postgresql.Driver";
@@ -126,7 +127,7 @@ try {
   myPreparedStatement = myConnection.prepareStatement(myQuery);
   myResultSet = myPreparedStatement.executeQuery();
   while(myResultSet.next()) {
-    out.print("<h2>" + myResultSet.getString("quantity") + " * " + myResultSet.getString("ecw_type") + "</h2>");
+    out.print("<h2>" + myResultSet.getString("quantity") + " * " + myResultSet.getString("ewc_type") + "</h2>");
     out.print("<p>Score +" + myResultSet.getString("score") + "<br/>");
   }
     
@@ -160,6 +161,10 @@ date :<input type="text" name="date" /><br/>
 
 </form>
 
+<iframe src="webmap/webApp.html?requestType=organisations&organisationType=con" width="100%" height="500"></iframe>
+
+
+
     </div> <!-- /container -->
 
     <!-- Le javascript
@@ -178,3 +183,6 @@ date :<input type="text" name="date" /><br/>
     <script src="js/bootstrap-collapse.js"></script>
     <script src="js/bootstrap-carousel.js"></script>
     <script src="js/bootstrap-typeahead.js"></script>
+
+</body>
+</html>

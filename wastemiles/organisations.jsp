@@ -42,6 +42,7 @@
             <ul class="nav">
               <li><a href="/wastemiles">Home</a></li>
               <li class="active"><a href="organisations.jsp">High Scores</a></li>               
+              <li><a href="opportunities.jsp">Opportunities</a></li>
               <li><a href="/wastemiles#about">About</a></li>
               <li><a href="/wastemiles/#contact">Contact</a></li>
             </ul>
@@ -112,7 +113,7 @@ try {
 
 <p><a href="add_organisation.html" class="btn btn-primary btn-large">add a company &raquo;</a></p>
 
-<<iframe src="webmaps/webApp.html"></iframe>>
+<iframe src="webmap/webApp.html" width="100%" height="500"></iframe>
 
     </div> <!-- /container -->
 

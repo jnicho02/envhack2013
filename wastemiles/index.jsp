@@ -45,6 +45,7 @@
             <ul class="nav">
               <li class="active"><a href="/wastemiles">Home</a></li>
               <li><a href="organisations.jsp">High Scores</a></li>
+              <li><a href="opportunities.jsp">Opportunities</a></li>
               <li><a href="#about">About</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>
@@ -77,7 +78,7 @@
         <div class="span4">
           <h2>Publicise</h2>
           <p>Generate an annual Waste Miles statement showing off your Green credentials.</p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
+          <p><a class="btn" href="organisation.jsp?id=1">View details &raquo;</a></p>
         </div>
       </div>      
 
@@ -95,7 +96,7 @@
        </div>
         <div class="span4">
           <h2>Recover</h2>
-          <p>Recover energy from byproducts rather than letting.</p>
+          <p>Recover energy from byproducts rather than letting it go to landfill, air or water.</p>
           <p><a class="btn" href="#">View details &raquo;</a></p>
         </div>
       </div>
