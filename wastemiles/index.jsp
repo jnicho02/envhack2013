@@ -1,6 +1,6 @@
   <head>
     <meta charset="utf-8">
-    <title>High Score Table</title>
+    <title>Waste Miles Home</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -25,7 +25,10 @@
       <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
                     <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
                                    <link rel="shortcut icon" href="ico/favicon.png">
-  </head>
+								<!-- start: font -->
+								<link href='http://fonts.googleapis.com/css?family=Monda' rel='stylesheet' type='text/css'>
+								<!-- end: font -->  
+	</head>
 
   <body>
 
@@ -37,10 +40,11 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="brand" href="#">Project name</a>
+          <a class="brand" href="#">Waste Miles</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
               <li class="active"><a href="/wastemiles">Home</a></li>
+              <li><a href="organisations.jsp">High Scores</a></li>
               <li><a href="#about">About</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>
@@ -53,10 +57,69 @@
     
       <div class="hero-unit">
         <p><img src="new_article_0c18c5b1b44402550217405090a9065573ad6f4a.jpg"/></p>
-        <p><a href="organisations.jsp" class="btn btn-primary btn-large">High scores &raquo;</a></p>
+		<h2>Gain by being part of the circular economy</h2>
+        <p><a href="#about" class="btn btn-primary btn-large">Find out more &raquo;</a></p>
       </div>
-      
 
+<br/><br/>
+	
+      <div class="row">
+        <div class="span4">
+          <h2><a id="about">&nbsp;</a><!--anchorLink: about --><!-- About -->Register</h2>
+          <p>Use the online forms to map the flow of materials in and out of your organisation</p>
+          <p><a class="btn" href="add_organisation.html">Add your company &raquo;</a></p>
+        </div>
+        <div class="span4">
+          <h2>Benchmark</h2>
+          <p>See how you score. Check your ranking against similar businesses in your area. </p>
+          <p><a class="btn" href="organisations.jsp">High scores &raquo;</a></p>
+       </div>
+        <div class="span4">
+          <h2>Publicise</h2>
+          <p>Generate an annual Waste Miles statement showing off your Green credentials.</p>
+          <p><a class="btn" href="#">View details &raquo;</a></p>
+        </div>
+      </div>      
+
+      <div class="row">
+        <div class="span4">
+          <h2>Reduce and reuse</h2>
+          <p>See where you are losing money through waste. Cut down your output of byproducts or re-use byproducts in your own processes.
+	Recycle things that cannot be used as raw materials.</p>
+          <p><a class="btn" href="add_organisation.html">Add your company &raquo;</a></p>
+        </div>
+        <div class="span4">
+          <h2>Re-direct</h2>
+          <p>Re-direct byproducts to other local industry and reduce your disposals into landfill, air or water. </p>
+          <p><a class="btn" href="organisations.jsp">High scores &raquo;</a></p>
+       </div>
+        <div class="span4">
+          <h2>Recover</h2>
+          <p>Recover energy from byproducts rather than letting.</p>
+          <p><a class="btn" href="#">View details &raquo;</a></p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="span4">
+          <h2>Intercept</h2>
+          <p>Identify local businesses that whose output could become your input and intercept it before it goes into disposal. </p>
+          <p><a class="btn" href="add_organisation.html">Add your company &raquo;</a></p>
+        </div>
+        <div class="span4">
+          <h2>Identify</h2>
+          <p>Indentify new business opportunities where output is currently being wasted in local industry. </p>
+          <p><a class="btn" href="organisations.jsp">High scores &raquo;</a></p>
+       </div>
+        <div class="span4">
+          <h2></h2>
+          <p></p>
+          <p><a class="btn" href="#">View details &raquo;</a></p>
+        </div>
+      </div>
+
+
+<br/><br/><br/><br/><br/><br/><br/><br/>
 
     </div> <!-- /container -->
 

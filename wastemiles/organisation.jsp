@@ -28,7 +28,40 @@
       <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
                     <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
                                    <link rel="shortcut icon" href="ico/favicon.png">
+
+
+<!-- Google Charts -->
+
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Year', 'Inputs', 'Waste Miles'],
+          ['2009',  1000,      4000],
+          ['2010',  1170,      4600],
+          ['2011',  1200,      4670],
+          ['2012',  1190,      4000]
+        ]);
+
+        var options = {
+          title: 'Company Performance',
+          vAxis: {title: 'Year',  titleTextStyle: {color: 'red'}}
+        };
+
+        var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
   </head>
+  <body>
+    
+  </body>
+  
+  
+  
+  
 
   <body>
 
@@ -43,9 +76,10 @@
           <a class="brand" href="#">Project name</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li class="active"><a href="/wastemiles">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li><a href="/wastemiles">Home</a></li>
+              <li><a href="organisations.jsp">High Scores</a></li>               
+              <li><a href="/wastemiles#about">About</a></li>
+              <li><a href="/wastemiles/#contact">Contact</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -53,6 +87,10 @@
     </div>
 
     <div class="container">
+    
+    
+    <div class="hero-unit" id="chart_div" style="width: 900px; height: 500px;"></div>
+
     
     
 <%
