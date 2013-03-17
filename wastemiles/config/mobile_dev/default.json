@@ -1,0 +1,42 @@
+{
+	"proxyHost": "",	
+	"imagePath": "../img/openlayers/",
+	"projection": "EPSG:27700",
+	"activeMapControls": [
+		{
+			"name": "TouchNavigation"
+		}, {
+			"name": "ScaleLine"
+		}, {
+			"name": "Scale"
+		}, {
+			"name": "MousePosition"
+		}, {
+			"name": "Attribution"
+		},  {
+			"name": "locateControl"
+		}
+	],
+	"mapCenterEasting": 475000,
+	"mapCenterNorthing": 300000,
+	"zoomLevel": 2,
+	"resolutions": [2500, 1000, 500, 200, 100, 50, 25, 10, 5, 4, 2.5, 2, 1],
+	"layers": [
+		{
+			"type": "WMS",
+			"name": "OpenStreet Map",
+			"URL": "http://www.osmgb.org.uk/ogc/wms?",
+			"layerList": ["OSM-GB:NativeBNG"],
+			"projection": "EPSG:27700",
+			"singleTile": false,
+			"transitionEffect": "resize",
+			"makeTheUrlLong": false,
+			"boundMinX": 0,
+			"boundMinY": 0,
+			"boundMaxX": 800000,
+			"boundMaxY": 1300000,
+			"visible": false,
+			"baseLayer": false
+		}
+	]
+}

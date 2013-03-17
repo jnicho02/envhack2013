@@ -1,0 +1,9 @@
+{
+	"modes": [
+		{
+			"id": "0",
+			"url": "../config/web_dev/default.json",
+			"isDefault": true
+		}
+	]
+}

@@ -1,0 +1,19 @@
+{
+	"modes": [
+		{
+			"id": "0",
+			"url": "../config/mobile_dev/default.json",
+			"isDefault": true
+		},
+		{
+			"id": "1",
+			"url": "../config/mobile_dev/selection.json",
+			"isDefault": false
+		},
+		{
+			"id": "2",
+			"url": "../config/mobile_dev/drawing.json",
+			"isDefault": false
+		}
+	]
+}

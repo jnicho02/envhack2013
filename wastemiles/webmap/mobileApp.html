@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>EnvHack - Mobile</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+
+		<link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
+		
+		<script type="text/javascript" src="http://localhost:12175/javascript/GpsGate.js"></script>
+		<script type="text/javascript" src="../js-lib/digiright/loader-mobile.js"></script>
+
+	</head>
+	<body>
+		<h1 id="title">EnvHack Mobile Application</h1>
+		<div id="tags">
+			mobile, jquery
+		</div>
+		<p id="shortdesc">
+			EnvHack Mobile Application
+		</p>
+
+		<div data-role="page" id="mappage">
+			<div data-role="content">
+
+				<div id="map"></div>
+			</div>
+
+			<div data-role="footer">
+				<a href="#" id="locate" data-icon="locate" data-role="button">Locate</a>
+				<a href="#layerspage" data-icon="layers" data-role="button" data-rel="dialog" data-transition="pop">Layers</a>
+
+			</div>
+			<div id="navigation" data-role="controlgroup" data-type="vertical">
+				<a href="#" data-role="button" data-icon="plus" id="plus"
+				data-iconpos="notext" data-theme="a">Zoom in</a>
+				<a href="#" data-role="button" data-icon="minus" id="minus"
+				data-iconpos="notext" data-theme="a">Zoom out</a>
+				<a href="#" data-role="button" data-icon="pan" id="pan"
+				data-iconpos="notext" data-theme="a">Pan </a>
+				<a href="#" data-role="button" data-icon="gear" id="zoomMaxtent"
+				data-iconpos="notext" data-theme="a">Zoom to map extent </a>
+
+				<a href="#" data-role="button" data-icon="grid" id="attributeDisplay"
+				data-iconpos="notext" data-theme="a">Display attributes</a>
+				
+			</div>
+
+			<div id="drawing" data-role="controlgroup" data-type="horizontal" style="visibility:hidden;">
+				<a href="#" data-role="button" data-icon="polygon" id="drawPolygon"
+				data-iconpos="notext" data-theme="a">Draw Polygon</a>
+				<a href="#" data-role="button" data-icon="polyline" id="drawPolyline"
+				data-iconpos="notext" data-theme="a">Draw Polyline</a>
+				<a href="#" data-role="button" data-icon="point" id="drawPoint"
+				data-iconpos="notext" data-theme="a">Draw Point</a>
+				<a href="#" data-role="button" data-icon="clear" id="clear"
+				data-iconpos="notext" data-theme="a">Clear garphics</a>
+			</div>
+			
+		</div>
+
+		<div data-role="page" id="layerspage" >
+			<div data-role="header" >
+				<a href="#" data-role="button" data-icon="close" data-rel="back" id="closeForm"	data-iconpos="notext" data-theme="a">close Form</a>
+				<h1>Layers</h1>
+			</div>
+
+			<div data-role="content" style="overflow-y:auto;overflow-x:hidden;max-height: 600px">
+
+				<ul data-role="listview" data-inset="true" data-theme="d" data-dividertheme="c" id="layerslist"></ul>
+			</div>
+		</div>
+
+		<div id="popup" data-role="dialog" >
+			<div data-position="inline" data-theme="a" data-role="header">
+				<h1>Info</h1>
+			</div>
+			<div data-theme="d" data-role="content" style="overflow-y:auto;overflow-x:hidden;max-height: 600px">
+				<ul id="details-list" data-role="listview" data-theme="d" data-dividertheme="c"></ul>
+			</div>
+		</div>
+
+	</body>
+</html>

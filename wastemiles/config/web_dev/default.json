@@ -1,0 +1,97 @@
+{
+	"proxyHost": "/cgi-bin/proxy.cgi?url=",
+	"imagePath": "../img/openlayers/",
+	"projection": "EPSG:27700",
+	"mapCenterEasting": 475000,
+	"mapCenterNorthing": 300000,
+	"zoomLevel": 2,
+	"resolutions": [2500, 1000, 500, 200, 100, 50, 25, 10, 5, 4, 2.5, 2, 1],
+	"activeMapControls": [
+		{
+			"name": "PanZoomBar"
+		}, {
+			"name": "Graticule"
+		}, {
+			"name": "ScaleLine"
+		}, {
+			"name": "LayerControl"
+		}, {
+			"name": "overviewMap"
+		}, {
+			"name": "MousePosition"
+		}
+	] ,
+	"layers": [
+
+		{
+			"type": "WMS",
+			"name": "EA Boundaries",
+			"URL": "http://www.geostore.com/OGC/OGCInterface?SERVICE=WMS&UID=UDATAGOV2011&PASSWORD=datagov2011&INTERFACE=ENVIRONMENT&LC=2000000000000000000000",
+			"layerList": ["eainspire2011-wms-region_water_management_inspire"],
+			"projection": "EPSG:27700",
+			"singleTile": false,
+			"transitionEffect": "resize",
+			"makeTheUrlLong": false,
+			"boundMinX": 0,
+			"boundMinY": 0,
+			"boundMaxX": 800000,
+			"boundMaxY": 1300000,
+			"visible": false,
+			"baseLayer": false,
+			"displayInLayerSwitcher": true,
+			"transparent": true
+		}, {
+			"type": "WMS",
+			"name": "Landfill Sites",
+			"URL": "http://54.246.122.198:8080/geoserver/geostore/wms?",
+			"layerList": ["geostore:auth_landfill_site"],
+			"projection": "EPSG:27700",
+			"singleTile": false,
+			"transitionEffect": "resize",
+			"makeTheUrlLong": false,
+			"boundMinX": 0,
+			"boundMinY": 0,
+			"boundMaxX": 800000,
+			"boundMaxY": 1300000,
+			"visible": false,
+			"baseLayer": false,
+			"displayInLayerSwitcher": true,
+			"transparent": true
+		}
+		, {
+			"type": "WMS",
+			"name": "Organisations",
+			"URL": "http://54.246.122.198:8080/geoserver/geostore/wms?",
+			"layerList": ["geostore:organisations"],
+			"projection": "EPSG:27700",
+			"singleTile": false,
+			"transitionEffect": "resize",
+			"makeTheUrlLong": false,
+			"boundMinX": 0,
+			"boundMinY": 0,
+			"boundMaxX": 800000,
+			"boundMaxY": 1300000,
+			"visible": false,
+			"baseLayer": false,
+			"displayInLayerSwitcher": true,
+			"transparent": true
+		}, {
+			"type": "WMS",
+			"name": "Transactions",
+			"URL": "http://54.246.122.198:8080/geoserver/geostore/wms?",
+			"layerList": ["geostore:transactions"],
+			"projection": "EPSG:27700",
+			"singleTile": false,
+			"transitionEffect": "resize",
+			"makeTheUrlLong": false,
+			"boundMinX": 0,
+			"boundMinY": 0,
+			"boundMaxX": 800000,
+			"boundMaxY": 1300000,
+			"visible": false,
+			"baseLayer": false,
+			"displayInLayerSwitcher": true,
+			"transparent": true
+		}
+	]
+}
