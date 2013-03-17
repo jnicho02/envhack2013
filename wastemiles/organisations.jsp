@@ -72,7 +72,7 @@ try {
   String username = "postgres";
   String password = "password";
 
-  String myQuery = "SELECT * FROM organisations order by score";
+  String myQuery = "SELECT * FROM organisations order by score desc";
 
   Connection myConnection = null;
   PreparedStatement myPreparedStatement = null;
@@ -85,13 +85,18 @@ try {
   String id = null;
   String name = null;
   Integer score = null;
+  String rating = "poor";
   out.println("<table>");
-  out.println("<tr><th width='100' align='center'>name</th><th>score</th><th width='100'>rating</th></tr>");
+  out.println("<tr><th width='100' align='center'>name</th><th width='100'>rating</th></tr>");
   while(myResultSet.next()) {
     id = myResultSet.getString("gid");
     name = myResultSet.getString("name");
     score = myResultSet.getInt("score");
-    out.println("<tr><td align='left'><a href='organisation.jsp?id="+id+"'>"+name+"</a></td><td align='center'>"+score+"</td><td align='center'>poor</td></tr>");
+    rating = "warning";
+    if (score>4) { rating = "success"; }
+    if (score<1) { rating = "important"; }
+    
+    out.println("<tr><td align='left'><a href='organisation.jsp?id="+id+"'>"+name+"</a></td><td align='center'><span class='badge badge-"+rating+"'>"+score+"</td></tr>");
     }
   out.println("</table>");
 
@@ -104,7 +109,7 @@ try {
   }
   %>
 
-<p><a href='add_organisation.html'>add a company</a></p>
+<p><a href="add_organisation.html" class="btn btn-primary btn-large">add a company &raquo;</a></p>
 
 
 

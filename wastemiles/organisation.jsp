@@ -69,18 +69,38 @@ try {
   Connection myConnection = null;
   PreparedStatement myPreparedStatement = null;
   ResultSet myResultSet = null;
+  ResultSet transactionsResultSet = null;
   Class.forName(driver).newInstance();
   myConnection = DriverManager.getConnection(url,username,password);
   myPreparedStatement = myConnection.prepareStatement(myQuery);
   myResultSet = myPreparedStatement.executeQuery();
-  if(myResultSet.next())
+  if(myResultSet.next()) {
     out.print("<h2>Company " + myResultSet.getString("name") + "</h2>");
     out.print("<p>Address " + myResultSet.getString("address") + "<br/>");
     out.print("postcode " + myResultSet.getString("postcode") + "<br/>");
     out.print("type " + myResultSet.getString("type") + "</p>");
-    out.print("<h2>Score</h2>@");
-    out.print("");
-    out.print("<h2>List of transactions for this company</h2>");
+    out.print("<h2>Score</h2>");
+    out.print("<p>"+myResultSet.getString("score")+"</p>");
+  }
+  
+  out.print("<h2>Input</h2>");
+  myQuery = "SELECT * FROM transactions WHERE to_id='"+id+"'";
+  myPreparedStatement = myConnection.prepareStatement(myQuery);
+  myResultSet = myPreparedStatement.executeQuery();
+  while(myResultSet.next()) {
+    out.print("<h2>" + myResultSet.getString("quantity") + " * " + myResultSet.getString("ecw_type") + "</h2>");
+    out.print("<p>Score +" + myResultSet.getString("score") + "<br/>");
+  }
+    
+  out.print("<h2>Output</h2>");
+  myQuery = "SELECT * FROM transactions WHERE from_id='"+id+"'";
+  myPreparedStatement = myConnection.prepareStatement(myQuery);
+  myResultSet = myPreparedStatement.executeQuery();
+  while(myResultSet.next()) {
+    out.print("<p>" + myResultSet.getString("quantity") + " * " + myResultSet.getString("ewc_type") + " sent to " + myResultSet.getString("to_id") + " receiving a score +" + myResultSet.getString("score") + "</p>");
+  }
+  
+      
   }
   catch(ClassNotFoundException e){e.printStackTrace();}
   catch (SQLException ex)
@@ -89,8 +109,18 @@ try {
     out.print("SQLState: " + ex.getSQLState());
   }
 %>
-<p><a href="organisations.jsp">All organisations</a></p>
 
+<h1>Send waste</h1>
+<form action="add_transaction.jsp" method="post">
+
+id :<input type="text" name="id" /><br/>
+to :<input type="text" name="to_id" /><input type="hidden" name="from_id"  value="<% request.getParameter("id"); %>3"/><br/>
+quantity :<input type="text" name="quantity" /><br/>
+ewc_type :<input type="text" name="ewc_type" /><br/>
+date :<input type="text" name="date" /><br/>
+<input type="submit" />
+
+</form>
 
     </div> <!-- /container -->
 
