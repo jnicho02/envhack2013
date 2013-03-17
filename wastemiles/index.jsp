@@ -105,21 +105,38 @@
         <div class="span4">
           <h2>Intercept</h2>
           <p>Identify local businesses that whose output could become your input and intercept it before it goes into disposal. </p>
-          <p><a class="btn" href="add_organisation.html">Add your company &raquo;</a></p>
+          <p><a class="btn" href="opportunities.jsp">Find opportunties &raquo;</a></p>
         </div>
         <div class="span4">
           <h2>Identify</h2>
-          <p>Indentify new business opportunities where output is currently being wasted in local industry. </p>
-          <p><a class="btn" href="organisations.jsp">High scores &raquo;</a></p>
+          <p>Identify new business opportunities where output is currently being wasted in local industry. </p>
+          <p><a class="btn" href="opportunities.jsp">Find opportunties &raquo;</a></p>
        </div>
         <div class="span4">
-          <h2></h2>
-          <p></p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
+
         </div>
       </div>
 
-
+<div class="hero-unit">
+      <div class="row">
+        <div class="span3">
+          <h2><a id="contact">&nbsp;</a><!--anchorLink: contact -->Pascal Coulon</h2>
+          <p><img src="img/pascal.jpg"/></p>
+        </div>
+        <div class="span3">
+          <h2>Jez Nicholson</h2>
+          <p><img src="img/jez.jpg"/></p>
+       </div>
+        <div class="span3">
+          <h2>Kev Kirkland</h2>
+          <p><img src="img/kev.jpg"/></p>
+        </div>
+        <div class="span3">
+          <h2>Tom Richards</h2>
+          <p><img src="img/tom.jpg"/></p>
+        </div>
+     </div>
+</div>
 <br/><br/><br/><br/><br/><br/><br/><br/>
 
     </div> <!-- /container -->
